@@ -676,9 +676,15 @@ class MATTBOT(object):
             protocol = self.comboBox_2.currentText()
             if protocol == "BOOMER":
                 try:
-                    port = str(self.lineEdit.text())
-                    ser = serial.Serial(port, "9600")
-                    ser.write(str.encode("hi"))
+                    print(str(i)[2:-3])
+                    if( str(i)[2:-3]=="water" or  str(i)[2:-3]=="Water"):
+                        port = str(self.lineEdit.text())
+                        ser = serial.Serial(port, "9600")
+                        ser.write(str.encode("water"))                  
+                    else:
+                        port = str(self.lineEdit.text())
+                        ser = serial.Serial(port, "9600")
+                        ser.write(str.encode("hi"))                  
                 except:
                     print("BOOMER not connected ....")
 
