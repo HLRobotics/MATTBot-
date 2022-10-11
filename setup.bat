@@ -1,0 +1,2 @@
+cd HLEngine
+python HLEngine_EnvironmentSetup.py
